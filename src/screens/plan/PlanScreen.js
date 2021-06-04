@@ -40,7 +40,15 @@ const products = [
 	},
 ];
 
-function PlanScreen({ car, onBack, onSelectedProduct, order, onOrder }) {
+function PlanScreen({
+	car,
+	currentTab,
+	onBack,
+	onTab,
+	onSelectedProduct,
+	order,
+	onOrder,
+}) {
 	return (
 		<div>
 			<TheHeader />
@@ -68,9 +76,21 @@ function PlanScreen({ car, onBack, onSelectedProduct, order, onOrder }) {
 					</div>
 					<p className={styles.textAdd}>Agrega o quita coberturas</p>
 					<div className={styles.tabContainer}>
-						<Tab label="PROTEGE A TU AUTO" active />
-						<Tab label="PROTEGE A LOS QUE TE RODEAN" />
-						<Tab label="MEJORA TU PLAN" />
+						<Tab
+							onClick={() => onTab(0)}
+							label="PROTEGE A TU AUTO"
+							active={currentTab === 0}
+						/>
+						<Tab
+							onClick={() => onTab(1)}
+							label="PROTEGE A LOS QUE TE RODEAN"
+							active={currentTab === 1}
+						/>
+						<Tab
+							onClick={() => onTab(2)}
+							label="MEJORA TU PLAN"
+							active={currentTab === 2}
+						/>
 					</div>
 					<div className={styles.productsContainer}>
 						{products.map((product) => {

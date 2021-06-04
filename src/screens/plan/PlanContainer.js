@@ -10,6 +10,7 @@ function PlanContainer() {
 		total: 20,
 		products: [],
 	});
+	const [currentTab, setCurrentTab] = useState(0);
 
 	function onSelectedProduct(value, product) {
 		const isAdding = value;
@@ -35,13 +36,19 @@ function PlanContainer() {
 		history.push('/insurance-car/step-1');
 	}
 
+	function onTab(tabIndex) {
+		setCurrentTab(tabIndex);
+	}
+
 	return (
 		<PlanScreen
 			car={car}
+			currentTab={currentTab}
 			onBack={onBack}
 			onSelectedProduct={onSelectedProduct}
 			order={order}
 			onOrder={onOrder}
+			onTab={onTab}
 		/>
 	);
 }
