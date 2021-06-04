@@ -52,3 +52,5 @@ npm run build
 
 3. Se va a generar una carpeta **build** con todos los estáticos (js, css, html, imágenes, etc) que pueden
    ser desplegados en cualquier servidor web.
+
+Puedes ver un [demo de la ejecución de los tests aquí](https://user-images.githubusercontent.com/461124/120838871-ed473880-c52d-11eb-822b-a55a64e0497f.mp4)
