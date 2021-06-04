@@ -16,6 +16,20 @@ npm start
 
 3. Se abrirá automáticamente el browser con la url http://localhost:3000
 
+# Testing
+
+1. Instalar dependencias (no es necesario si ya se ha hecho en otro paso)
+
+```
+npm install
+```
+
+2. Ejecutar pruebas con cypress
+
+```
+npm run test:e2e
+```
+
 # Construir el proyecto para producción
 
 1. Instalar las dependencias usando npm

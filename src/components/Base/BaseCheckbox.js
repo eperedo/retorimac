@@ -2,7 +2,11 @@ import styles from './BaseCheckbox.module.scss';
 
 function BaseCheckbox({ attrs, label }) {
 	return (
-		<label htmlFor={attrs.id} className={styles.container}>
+		<label
+			data-test-id={attrs.id}
+			htmlFor={attrs.id}
+			className={styles.container}
+		>
 			{label}
 			<input
 				className={styles.input}

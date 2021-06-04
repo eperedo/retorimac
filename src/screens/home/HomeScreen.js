@@ -46,7 +46,11 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 						<div style={{ flex: '1 1 70%' }}>
 							<BaseInput
 								placeholder="Nro. de doc"
-								attrs={{ 'aria-label': 'Nro. de doc', type: 'number' }}
+								attrs={{
+									'data-test-id': 'dni',
+									'aria-label': 'Nro. de doc',
+									type: 'number',
+								}}
 								value={formState.dni.value}
 								onChange={(e) =>
 									onValidateInput({ type: 'dni', value: e.target.value })
@@ -58,7 +62,11 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 					<div>
 						<BaseInput
 							placeholder="Celular"
-							attrs={{ 'aria-label': 'Celular', type: 'tel' }}
+							attrs={{
+								'data-test-id': 'phone',
+								'aria-label': 'Celular',
+								type: 'tel',
+							}}
 							onChange={(e) =>
 								onValidateInput({ type: 'phone', value: e.target.value })
 							}
@@ -69,7 +77,7 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 					<div>
 						<BaseInput
 							placeholder="Placa"
-							attrs={{ 'aria-label': 'Placa' }}
+							attrs={{ 'data-test-id': 'plate', 'aria-label': 'Placa' }}
 							onChange={(e) =>
 								onValidateInput({ type: 'plate', value: e.target.value })
 							}
@@ -93,6 +101,7 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 						<BaseButton
 							type="submit"
 							attrs={{
+								'data-test-id': 'btn',
 								disabled: isLoading || !formState.form.isValid,
 							}}
 						>

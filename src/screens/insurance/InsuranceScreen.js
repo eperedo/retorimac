@@ -26,7 +26,7 @@ function InsuranceScreen({
 				<StepsProgress activeStepNumber={1} />
 				<div className={styles.formContainer}>
 					<BackMenu onClick={onBack} />
-					<p className={styles.textTitle}>
+					<p data-test-id="username" className={styles.textTitle}>
 						¡Hola, <span>{user?.name}!</span>
 					</p>
 					<p className={styles.textSubtitle}>Completa los datos de tu auto</p>
