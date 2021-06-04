@@ -12,6 +12,7 @@ import BaseButton from '../../components/Base/BaseButton';
 import BackMenu from '../../components/BackMenu/BackMenu';
 import StepsProgress from '../../components/StepsProgress/StepsProgress';
 import PriceDetail from '../../components/PriceDetail/PriceDetail';
+import { Link } from 'react-router-dom';
 
 const products = [
 	{
@@ -65,7 +66,9 @@ function PlanScreen({
 						<div className={styles.carContainer}>
 							<p className={styles.textSmall}>Placa: {car?.plate}</p>
 							<p className={styles.textBrand}>{car?.brand}</p>
-							<p className={styles.textEdit}>EDITAR</p>
+							<Link to="/insurance-car/step-1" className={styles.textEdit}>
+								EDITAR
+							</Link>
 							<img
 								alt="Empleado de rimac sonriendo con el pulgar arriba"
 								src={employee}
