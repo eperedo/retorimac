@@ -58,6 +58,8 @@ function HomeContainer() {
 	async function onSubmit(e) {
 		setStateHttp('loading');
 		e.preventDefault();
+		// genero un ID aleatorio para generar
+		// distinta información en cada consulta
 		const id = Math.ceil(Math.random() * 10);
 		const response = await fetch(
 			`https://jsonplaceholder.typicode.com/users/${id}`,
@@ -67,6 +69,8 @@ function HomeContainer() {
 		localStorage.setItem(
 			'user',
 			JSON.stringify({
+				// algunos nombres son muy largos así
+				// que decidí solo tomar la primera palabra
 				name: json.name.split(' ')[0],
 				email: json.email.toLowerCase(),
 				plate: formState.plate.value,

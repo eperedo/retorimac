@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import useDataFromLs from '../../hooks/useDataFromLs';
 import InsuranceScreen from './InsuranceScreen';
 
 function InsuranceContainer() {
-	let { step } = useParams();
 	const history = useHistory();
-	const [user, setUser] = useState();
+	const user = useDataFromLs('user', () => history.push('/'));
 	const [carInfo, setCarInfo] = useState({
 		amount: 13500,
 		brand: 'Wolkswagen',
@@ -45,15 +45,6 @@ function InsuranceContainer() {
 		window.localStorage.setItem('car', JSON.stringify(data));
 		history.push('/plan');
 	}
-
-	useEffect(() => {
-		const user = window.localStorage.getItem('user');
-		if (user) {
-			setUser(JSON.parse(user));
-		} else {
-			history.push('/');
-		}
-	}, [step, history]);
 
 	function onBack() {
 		history.push('/');

@@ -1,23 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import useDataFromLs from '../../hooks/useDataFromLs';
 import PlanScreen from './PlanScreen';
 
 function PlanContainer() {
 	const history = useHistory();
-	const [car, setCar] = useState();
+	const car = useDataFromLs('car', () => history.push('/'));
 	const [order, setOrder] = useState({
 		total: 20,
 		products: [],
 	});
-
-	useEffect(() => {
-		const car = window.localStorage.getItem('car');
-		if (car) {
-			setCar(JSON.parse(car));
-		} else {
-			history.push('/');
-		}
-	}, [history]);
 
 	function onSelectedProduct(e, product) {
 		const isAdding = e.target.checked;
