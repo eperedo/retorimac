@@ -20,19 +20,21 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 						height="250"
 						alt="Persona con telefono"
 					/>
-					<p className={styles.textSmall}>¡NUEVO!</p>
-					<p className={styles.textTitle}>Seguro Vehicular</p>
-					<p className={styles.textTitleRed}>Tracking</p>
-					<p className={styles.textSubTitle}>
-						Cuentanos donde le haras seguimiento a tu seguro
-					</p>
-					<img
-						src={personHome}
-						className={styles.personMobile}
-						width="112"
-						height="276"
-						alt="Persona con telefono"
-					/>
+					<div className={styles.heroContainer}>
+						<p className={styles.textSmall}>¡NUEVO!</p>
+						<p className={styles.textTitle}>Seguro Vehicular</p>
+						<p className={styles.textTitleRed}>Tracking</p>
+						<p className={styles.textSubTitle}>
+							Cuentanos donde le haras seguimiento a tu seguro
+						</p>
+						<img
+							src={personHome}
+							className={styles.personMobile}
+							width="112"
+							height="276"
+							alt="Persona con telefono"
+						/>
+					</div>
 				</div>
 				<form onSubmit={onSubmit} className={styles.formContainer}>
 					<p className={styles.textTitle}>Déjanos tus datos</p>

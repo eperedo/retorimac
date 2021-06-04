@@ -28,12 +28,6 @@ function ProductItem({ icon, title, description, onChange }) {
 			<img src={icon} alt={title} width="40" height="40" />
 			<p className={styles.textTitle}>{title}</p>
 			<Switch onClick={onClick} value={btnState} />
-			{/* <input
-				type="checkbox"
-				onChange={onChange}
-				aria-label="Agregar Servicio"
-				className={styles.switch}
-			/> */}
 			<img
 				alt="Icono de flecha"
 				className={styles.iconArrow}
