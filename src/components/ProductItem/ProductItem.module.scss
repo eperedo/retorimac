@@ -1,3 +1,5 @@
+@import './../../breakpoints.scss';
+
 .textTitle {
 	color: var(--gray1);
 }
@@ -8,8 +10,8 @@
 	display: grid;
 	gap: 10px 0;
 	grid-template-columns: 60px 1fr 50px;
-	grid-template-rows: 40px 1fr 16px 20px;
-	padding-top: 24px;
+	grid-template-rows: max-content;
+	padding: 24px 0;
 }
 
 .textDescription {
@@ -28,4 +30,36 @@
 	font-weight: bold;
 	grid-column-start: 2;
 	text-align: start;
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.buttonToggle {
+	display: none;
+	@include for-tablet-portrait-up {
+		align-items: center;
+		display: flex;
+		background-color: transparent;
+		border: none;
+		color: #6f7dff;
+		font-size: 12px;
+		font-weight: bold;
+		justify-content: space-around;
+		grid-column: 2 / 2;
+		max-width: 105px;
+	}
+}
+
+.switch {
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.iconArrow {
+	display: none;
+	@include for-tablet-portrait-up {
+		display: inline;
+	}
 }

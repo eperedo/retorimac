@@ -11,8 +11,8 @@ function PlanContainer() {
 		products: [],
 	});
 
-	function onSelectedProduct(e, product) {
-		const isAdding = e.target.checked;
+	function onSelectedProduct(value, product) {
+		const isAdding = value;
 		const newState = { ...order };
 		if (isAdding) {
 			newState.products.push(product);

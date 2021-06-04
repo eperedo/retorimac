@@ -59,8 +59,10 @@ function InsuranceScreen({
 						</div>
 					</div>
 					<div className={styles.infoContainer}>
+						<p className={styles.textHelp}>AYUDA</p>
+						<div className={styles.separatorHelp} />
 						<img src={car} width="48" height="48" alt="carro de color rojo" />
-						<div>
+						<div className={styles.moreHelpContainer}>
 							<p className={styles.textInfo}>¿No encuentras el modelo?</p>
 							<p className={styles.textLink}>CLICK AQUÍ</p>
 						</div>
@@ -89,7 +91,7 @@ function InsuranceScreen({
 							/>
 						</div>
 					</div>
-					<div className={styles.wat}>
+					<div className={styles.rangeContainer}>
 						<div className={styles.amountContainer}>
 							<p className={styles.textRegular}>Indica la suma asegurada</p>
 							<div className={styles.pricesRangeContainer}>

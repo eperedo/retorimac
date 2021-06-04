@@ -1,0 +1,27 @@
+@import './../../breakpoints.scss';
+
+.switchContainer {
+	background-color: var(--green1);
+	border: none;
+	border-radius: 18px;
+	height: 32px;
+	position: relative;
+	width: 51px;
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.circle {
+	background-color: var(--white);
+	border-radius: 50%;
+	height: 28px;
+	position: absolute;
+	// right: 4px;
+	top: 2px;
+	width: 28px;
+
+	&.inactive {
+		left: 4px;
+	}
+}

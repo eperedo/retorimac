@@ -2,32 +2,6 @@ import { useReducer, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import HomeScreen from './HomeScreen';
 
-const initialState = {
-	dni: {
-		value: '',
-		hasError: false,
-		dirty: false,
-	},
-	phone: {
-		value: '',
-		hasError: false,
-		dirty: false,
-	},
-	plate: {
-		value: '',
-		hasError: false,
-		dirty: false,
-	},
-	tos: {
-		value: false,
-		hasError: false,
-		dirty: false,
-	},
-	form: {
-		isValid: false,
-	},
-};
-
 function reducer(state, action) {
 	const newState = { ...state };
 	newState[action.type].value = action.value;
@@ -53,7 +27,31 @@ function reducer(state, action) {
 function HomeContainer() {
 	const history = useHistory();
 	const [stateHttp, setStateHttp] = useState('idle');
-	const [formState, dispatch] = useReducer(reducer, initialState);
+	const [formState, dispatch] = useReducer(reducer, {
+		dni: {
+			value: '',
+			hasError: false,
+			dirty: false,
+		},
+		phone: {
+			value: '',
+			hasError: false,
+			dirty: false,
+		},
+		plate: {
+			value: '',
+			hasError: false,
+			dirty: false,
+		},
+		tos: {
+			value: false,
+			hasError: false,
+			dirty: false,
+		},
+		form: {
+			isValid: false,
+		},
+	});
 
 	async function onSubmit(e) {
 		setStateHttp('loading');
