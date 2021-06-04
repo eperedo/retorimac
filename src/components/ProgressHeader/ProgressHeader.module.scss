@@ -1,0 +1,24 @@
+@import './../../breakpoints.scss';
+
+.header {
+	align-items: center;
+	border-bottom: 1px solid var(--gray5);
+	border-top: 1px solid var(--gray5);
+	display: flex;
+	justify-content: space-around;
+	padding: 12px 32px;
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+
+	p {
+		color: var(--gray2);
+		font-size: 10px;
+		font-weight: bold;
+	}
+
+	button {
+		background-color: transparent;
+		border: none;
+	}
+}

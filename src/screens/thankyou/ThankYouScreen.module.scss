@@ -1,0 +1,66 @@
+@import './../../breakpoints.scss';
+
+.backgroundImage {
+	background-color: var(--white1);
+	position: relative;
+}
+
+.container {
+	display: grid;
+	@include for-tablet-portrait-up {
+		grid-template-columns: 0.5fr 1fr;
+		height: 100vh;
+	}
+}
+
+.imageEmployee {
+	height: 208px;
+	width: 100%;
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.imageEmployeeDesktop {
+	display: none;
+	height: 448px;
+	width: 416px;
+	@include for-tablet-portrait-up {
+		display: inline;
+		position: absolute;
+		right: -50px;
+		top: 96px;
+	}
+}
+
+.textLarge {
+	color: var(--red1);
+	font-size: 28px;
+	@include for-tablet-portrait-up {
+		font-size: 36px;
+	}
+}
+
+.textSubTitle {
+	color: var(--gray1);
+	font-size: 28px;
+	@include for-tablet-portrait-up {
+		font-size: 36px;
+	}
+}
+
+.textRegular {
+	color: var(--gray2);
+}
+
+.infoContainer {
+	padding: 48px 32px;
+	@include for-tablet-portrait-up {
+		margin: 0 auto;
+		max-width: 480px;
+		padding-top: 96px;
+	}
+	* {
+		margin: 15px 0;
+	}
+}

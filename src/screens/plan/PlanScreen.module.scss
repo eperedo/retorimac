@@ -1,0 +1,155 @@
+@import './../../breakpoints.scss';
+
+.container {
+	display: grid;
+	@include for-tablet-portrait-up {
+		background-color: var(--white);
+		grid-template-columns: 0.4fr 1fr;
+	}
+}
+
+.carContainer {
+	background-color: var(--white);
+	border: 3px solid var(--white2);
+	border-radius: 12px;
+	filter: drop-shadow(0px 0px 10px rgba(163, 171, 204, 0.12));
+	padding: 24px;
+	position: relative;
+
+	p {
+		margin: 10px 0;
+	}
+
+	img {
+		position: absolute;
+		right: 0;
+		top: -20px;
+	}
+
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+		max-height: 188px;
+
+		img {
+			top: -15px;
+		}
+	}
+}
+
+.infoContainer {
+	display: grid;
+	background-color: var(--white1);
+	gap: 20px;
+	padding: 40px 32px;
+	@include for-tablet-portrait-up {
+		background-color: var(--white);
+		grid-column: 1 / 3;
+	}
+}
+
+.textBig {
+	color: var(--gray1);
+	font-size: 28px;
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+	}
+}
+
+.textRegular {
+	color: var(--gray2);
+	font-size: 16px;
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+	}
+}
+
+.textSmall {
+	color: var(--gray3);
+	font-size: 12px;
+}
+
+.textBrand {
+	color: var(--gray1);
+	font-size: 16px;
+}
+
+.textEdit {
+	color: var(--purple1);
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.textAdd {
+	color: var(--gray1);
+	font-size: 20px;
+	padding: 20px;
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+	}
+}
+
+.productsContainer {
+	padding: 12px 32px;
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+	}
+}
+
+.priceContainer {
+	align-items: center;
+	box-shadow: 0px 1px 4px rgba(163, 171, 204, 0.06),
+		0px 8px 30px rgba(20, 43, 127, 0.1);
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	padding: 14px 32px;
+
+	.button {
+		flex-basis: 168px;
+	}
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.textPrice {
+	color: var(--gray1);
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.textMonth {
+	color: var(--gray1);
+	font-size: 10px;
+	font-weight: 700;
+}
+
+.tabContainer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+	}
+}
+
+.formContainer {
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-template-columns: 1fr;
+	@include for-tablet-portrait-up {
+		background-color: var(--white);
+		grid-template-columns: 1fr 1fr;
+	}
+	@include for-tablet-landscape-up {
+		padding: 0 96px;
+	}
+}
+
+.imageEmployee {
+	height: 156px;
+	width: 80px;
+	@include for-tablet-portrait-up {
+		height: 196px;
+		width: 112px;
+	}
+}

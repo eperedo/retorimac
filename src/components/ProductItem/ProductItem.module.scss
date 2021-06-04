@@ -1,0 +1,31 @@
+.textTitle {
+	color: var(--gray1);
+}
+
+.productItem {
+	align-items: center;
+	border-bottom: 1px solid var(--gray5);
+	display: grid;
+	gap: 10px 0;
+	grid-template-columns: 60px 1fr 50px;
+	grid-template-rows: 40px 1fr 16px 20px;
+	padding-top: 24px;
+}
+
+.textDescription {
+	color: var(--gray2);
+	font-size: 14px;
+	grid-column-end: 4;
+	grid-column-start: 2;
+}
+
+.textButton {
+	background-color: transparent;
+	border: none;
+	color: var(--gray4);
+	cursor: pointer;
+	font-size: 10px;
+	font-weight: bold;
+	grid-column-start: 2;
+	text-align: start;
+}

@@ -1,0 +1,33 @@
+.stepContainer {
+	align-items: center;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.circle {
+	align-items: center;
+	background-color: transparent;
+	border-radius: 50%;
+	border: 1px solid var(--gray3);
+	color: var(--gray3);
+	display: flex;
+	font-size: 12px;
+	font-weight: bold;
+	height: 24px;
+	justify-content: center;
+	width: 24px;
+}
+
+.circleActive {
+	background-color: var(--purple1);
+	color: var(--white);
+}
+
+.text {
+	color: var(--gray3);
+	margin-left: 20px;
+}
+
+.textActive {
+	color: var(--gray1);
+}

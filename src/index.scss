@@ -1,0 +1,27 @@
+:root {
+	--black: #000;
+	--gray1: #494f66;
+	--gray2: #676f8f;
+	--gray3: #c5cbe0;
+	--gray4: #a3abcc;
+	--gray5: #e4e8f7;
+	--green1: #43b748;
+	--purple1: #6769ff;
+	--purple2: #6f7dff;
+	--red1: #ef3340;
+	--white: #fff;
+	--white1: #f7f8fc;
+	--white2: #f0f2fa;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

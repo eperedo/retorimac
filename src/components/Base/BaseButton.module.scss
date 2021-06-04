@@ -1,0 +1,16 @@
+.btn {
+	background: var(--red1);
+	border: none;
+	border-radius: 8px;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 14px;
+	outline-color: var(--gray3);
+	padding: 20px 32px;
+	width: 100%;
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+}

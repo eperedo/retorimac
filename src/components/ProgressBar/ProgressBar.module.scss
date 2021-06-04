@@ -1,0 +1,23 @@
+.container {
+	flex-basis: 60%;
+	position: relative;
+}
+
+@mixin basic-progress {
+	border-radius: 20px;
+	height: 6px;
+	width: 100%;
+}
+
+.progress {
+	@include basic-progress;
+	background-color: var(--gray5);
+}
+
+.value {
+	@include basic-progress;
+	background-color: var(--purple2);
+	position: absolute;
+	top: 0;
+	width: 100%;
+}

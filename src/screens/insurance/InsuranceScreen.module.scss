@@ -1,0 +1,161 @@
+@import './../../breakpoints.scss';
+
+.container {
+	display: grid;
+
+	@include for-tablet-portrait-up {
+		grid-template-columns: 0.4fr 1fr;
+	}
+}
+
+.formContainer {
+	display: grid;
+	gap: 15px;
+	padding: 30px;
+	@include for-tablet-portrait-up {
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: max-content;
+		height: 100vh;
+	}
+}
+
+.pricesRangeContainer {
+	align-items: center;
+	display: flex;
+	gap: 5px;
+
+	p {
+		color: var(--gray2);
+		font-size: 12px;
+	}
+
+	.separator {
+		border: 1px solid var(--gray5);
+		height: 13px;
+		width: 1px;
+	}
+}
+
+.textTitle {
+	color: var(--gray1);
+	font-size: 40px;
+	font-weight: 400;
+
+	span {
+		color: var(--red1);
+	}
+
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+	}
+}
+
+.textSubtitle {
+	color: var(--gray2);
+	font-size: 16px;
+
+	@include for-tablet-portrait-up {
+		grid-column: 1 / 3;
+	}
+}
+
+.infoContainer {
+	align-items: center;
+	background-color: var(--white1);
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 16px;
+	@include for-tablet-portrait-up {
+		background-color: var(--white);
+		flex-direction: row-reverse;
+	}
+}
+
+.gasForm {
+	align-items: center;
+	display: flex;
+}
+
+.gasContainer {
+	display: flex;
+	flex-direction: column;
+	@include for-tablet-portrait-up {
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.textInfo {
+	color: var(--gray2);
+	font-size: 14px;
+}
+
+.textLink {
+	color: var(--purple2);
+	font-size: 10px;
+}
+
+.textRegular {
+	color: var(--gray1);
+	font-size: 16px;
+}
+
+footer {
+	background-color: var(--white);
+	border-top: 1px solid var(--gray5);
+	padding: 30px;
+
+	.textSmall {
+		color: var(--gray3);
+		font-size: 12px;
+		font-weight: 300;
+	}
+
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.radio:checked {
+	background-color: tomato;
+	color: green;
+	width: 300px;
+}
+
+.progressContainer {
+	@include for-tablet-portrait-up {
+		display: none;
+	}
+}
+
+.selectsContainer {
+	> div {
+		margin-top: 10px;
+	}
+}
+
+.wat {
+	display: flex;
+	flex-direction: column;
+	@include for-tablet-portrait-up {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		grid-column: 1;
+		justify-content: space-between;
+	}
+
+	> * {
+		margin: 5px 0;
+	}
+}
+
+.buttonContainer {
+	width: 100%;
+	@include for-tablet-portrait-up {
+		grid-column: 1;
+		width: 50%;
+	}
+}

@@ -1,0 +1,10 @@
+@import './../../breakpoints.scss';
+
+.stepContainer {
+	display: none;
+	@include for-tablet-portrait-up {
+		background-color: var(--white1);
+		display: block;
+		padding: 30px;
+	}
+}

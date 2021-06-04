@@ -1,0 +1,46 @@
+@import './../../breakpoints.scss';
+
+.priceContainer {
+	display: none;
+	@include for-tablet-portrait-up {
+		display: grid;
+		grid-column: 3 / 3;
+		grid-gap: 15px 0;
+		grid-template-columns: 1fr;
+	}
+}
+
+.totalContainer {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.benefitsContainer {
+	display: grid;
+	grid-template-columns: 0.1fr 1fr;
+}
+
+.separator {
+	border: 1px solid var(--gray5);
+	height: 1px;
+}
+
+.textAmount {
+	color: var(--gray1);
+	font-size: 28px;
+}
+
+.textSmall {
+	color: var(--gray2);
+	font-size: 14px;
+}
+
+.textXSmall {
+	color: var(--gray2);
+	font-size: 12px;
+}
+
+.textRegular {
+	font-size: 16px;
+}

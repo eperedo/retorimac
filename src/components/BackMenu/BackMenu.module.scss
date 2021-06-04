@@ -1,0 +1,16 @@
+@import './../../breakpoints.scss';
+
+.button {
+	align-items: center;
+	border: none;
+	background-color: transparent;
+	color: var(--gray3);
+	display: none;
+	justify-content: space-between;
+	font-size: 12px;
+	font-weight: 400;
+	max-width: 86px;
+	@include for-tablet-portrait-up {
+		display: flex;
+	}
+}
