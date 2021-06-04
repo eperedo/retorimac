@@ -42,6 +42,13 @@
 
 ### Crear paginas
 
+Todas las páginas se dividen en dos componentes. El primero con el sufijo Screen que
+es el componente que no contien ninguna lógica de negocio, solo se encarga de recibir props
+y de acuerdo a esos valores renderizar la interfaz.
+El segundo componente con el sufijo Container es el que contiene la logica de negocio y todo lo relacionado a la implementación de la funcionalidad. Genera y envía state al Screen.
+Uno de los beneficios de esta separación es que se puede hacer más sencilla la implementación
+de testing unitario o de integración sin recurrir a patrones como stubs o mocks.
+
 - **Home**: incluye validación de formularios y consumo de servicio web vía http.
 - **Paso 1 de seguro**: Verificar que la información del carro es guardada correctamente
 - **Paso 2 de seguro**: Verificar que el total del seguro se refleje cada vez que se agrega o elimina una cobertura
