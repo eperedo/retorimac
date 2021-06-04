@@ -6,12 +6,7 @@ function ThankYouContainer() {
 	const history = useHistory();
 	const user = useDataFromLs('user', () => history.push('/'));
 
-	function onClick() {
-		history.push('/');
-		window.localStorage.clear();
-	}
-
-	return <ThankYouScreen user={user} onClick={onClick} />;
+	return <ThankYouScreen user={user} />;
 }
 
 export default ThankYouContainer;

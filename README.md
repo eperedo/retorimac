@@ -24,7 +24,13 @@ npm start
 npm install
 ```
 
-2. Ejecutar pruebas con cypress
+2. Iniciar el servidor de desarrollo
+
+```
+npm start
+```
+
+3. Ejecutar pruebas con cypress
 
 ```
 npm run test:e2e
