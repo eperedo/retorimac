@@ -1,6 +1,12 @@
 import styles from './BaseInput.module.scss';
 
-function BaseInput({ placeholder, onChange, attrs, showError = false }) {
+function BaseInput({
+	errorMessage,
+	placeholder,
+	onChange,
+	attrs,
+	showError = false,
+}) {
 	const cssClasses = showError
 		? `${styles.input} ${styles.error}`
 		: styles.input;
@@ -12,7 +18,7 @@ function BaseInput({ placeholder, onChange, attrs, showError = false }) {
 				onChange={onChange}
 				className={cssClasses}
 			/>
-			{showError && <span className={styles.textError}>Campo requerido</span>}
+			{showError && <span className={styles.textError}>{errorMessage}</span>}
 		</>
 	);
 }

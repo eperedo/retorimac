@@ -6,6 +6,15 @@ function reducer(state, action) {
 	const newState = { ...state };
 	newState[action.type].value = action.value;
 	newState[action.type].hasError = !Boolean(action.value);
+	if (action.type === 'dni') {
+		newState[action.type].hasError = action.value.length !== 8;
+	}
+	if (action.type === 'phone') {
+		newState[action.type].hasError = action.value.length !== 9;
+	}
+	if (action.type === 'plate') {
+		newState[action.type].hasError = action.value.length !== 6;
+	}
 	newState[action.type].dirty = true;
 
 	if (
@@ -32,16 +41,19 @@ function HomeContainer() {
 			value: '',
 			hasError: false,
 			dirty: false,
+			errorMessage: 'Campo requerido de 8 dígitos',
 		},
 		phone: {
 			value: '',
 			hasError: false,
 			dirty: false,
+			errorMessage: 'Campo requerido de 9 dígitos',
 		},
 		plate: {
 			value: '',
 			hasError: false,
 			dirty: false,
+			errorMessage: 'Campo requerido de 6 dígitos',
 		},
 		tos: {
 			value: false,

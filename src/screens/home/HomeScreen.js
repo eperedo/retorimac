@@ -46,6 +46,7 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 						<div style={{ flex: '1 1 70%' }}>
 							<BaseInput
 								placeholder="Nro. de doc"
+								errorMessage={formState.dni.errorMessage}
 								attrs={{
 									'data-test-id': 'dni',
 									'aria-label': 'Nro. de doc',
@@ -62,6 +63,7 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 					<div>
 						<BaseInput
 							placeholder="Celular"
+							errorMessage={formState.phone.errorMessage}
 							attrs={{
 								'data-test-id': 'phone',
 								'aria-label': 'Celular',
@@ -77,6 +79,7 @@ function HomeScreen({ onSubmit, formState, onValidateInput, isLoading }) {
 					<div>
 						<BaseInput
 							placeholder="Placa"
+							errorMessage={formState.plate.errorMessage}
 							attrs={{ 'data-test-id': 'plate', 'aria-label': 'Placa' }}
 							onChange={(e) =>
 								onValidateInput({ type: 'plate', value: e.target.value })

@@ -27,18 +27,14 @@ describe('Home Page', () => {
 
 		cy.get('[data-test-id="dni"]').type('4');
 		cy.get('[data-test-id="dni"]').clear();
-		cy.contains('Campo requerido');
+		cy.contains('Campo requerido de 8 dígitos');
 
 		cy.get('[data-test-id="phone"]').type('9');
 		cy.get('[data-test-id="phone"]').clear();
-		cy.contains('Campo requerido');
+		cy.contains('Campo requerido de 9 dígitos');
 
 		cy.get('[data-test-id="plate"]').type('COG505');
 		cy.get('[data-test-id="plate"]').clear();
-		cy.contains('Campo requerido');
-		// cy.get('[data-test-id="phone"]').type('966528536');
-		// cy.get('[data-test-id="plate"]').type('COG607');
-		// cy.get('[data-test-id="tos"]').click();
-		// cy.get('[data-test-id="btn"]').click();
+		cy.contains('Campo requerido de 6 dígitos');
 	});
 });
