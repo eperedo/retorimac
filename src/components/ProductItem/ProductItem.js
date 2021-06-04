@@ -27,7 +27,7 @@ function ProductItem({ icon, title, description, onChange }) {
 		<div className={styles.productItem}>
 			<img src={icon} alt={title} width="40" height="40" />
 			<p className={styles.textTitle}>{title}</p>
-			<Switch onClick={onClick} value={btnState} />
+			<Switch onClick={onClick} title={title} value={btnState} />
 			<img
 				alt="Icono de flecha"
 				className={styles.iconArrow}

@@ -16,7 +16,18 @@
 	background-color: var(--white);
 	border-radius: 50%;
 	height: 28px;
+	left: 22px;
 	position: absolute;
+	right: 22px;
 	top: 2px;
+	transition: left 0.2s ease-in, right 0.2s ease-in;
 	width: 28px;
+
+	&.inactive {
+		left: 2px;
+	}
+
+	&.active {
+		right: 2px;
+	}
 }

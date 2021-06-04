@@ -1,11 +1,8 @@
 import styles from './Switch.module.scss';
 
-function Switch({ onClick, value = false }) {
+function Switch({ onClick, title, value = false }) {
 	const bg = value ? '#43b748' : '#e4e8f7';
-	const positionStyle = {
-		left: value ? 'initial' : '2px',
-		right: value ? '4px' : 'initial',
-	};
+	const stateClass = value ? styles.active : styles.inactive;
 
 	return (
 		<button
@@ -14,8 +11,9 @@ function Switch({ onClick, value = false }) {
 			style={{
 				backgroundColor: bg,
 			}}
+			title={title}
 		>
-			<div className={styles.circle} style={positionStyle}></div>
+			<div className={`${styles.circle} ${stateClass}`}></div>
 		</button>
 	);
 }
